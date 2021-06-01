@@ -5,8 +5,6 @@
 技术栈：Vue.js ,Websocket, Spring boot
 
 
-# coplay
-
 ## 项目组件安装
 ```
 yarn install
