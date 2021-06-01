@@ -52,7 +52,7 @@ export default {
   methods: {
     search () {
       this.$http({
-        url: "http://52.163.89.253:3000/search",
+        url: "http://192.168.123.60:8085/search",
         params: { keywords: this.kw, limit: 30, type: 1 },
         withCredentials: true,
       }).then((res) => {
