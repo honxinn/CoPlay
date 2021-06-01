@@ -1,0 +1,363 @@
+hr {
+  margin-top: 10px;
+}
+.roomlist {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 10px;
+  background: white;
+  user-select: none;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.bgs {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 98%;
+  height: 200px;
+  background: white;
+  box-shadow: 0 0 15px rgb(25 25 25 / 30%);
+  border-radius: 25px 25px;
+  transition: width 0.5s;
+}
+.top-box {
+  
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  div {
+    margin: 10px;
+  }
+}
+.title {
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  text-align: left;
+  font-weight: bold;
+  padding: 20px;
+
+  i {
+    display: none;
+    padding: 10px;
+    font-size: 25px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+}
+.search,
+.create-btn {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  border-radius: 30px 30px;
+}
+.search {
+  width: 100%;
+  background: #eee;
+}
+.icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.home-menu{
+  display: flex;
+  align-items: center;
+}
+.search-bar , .create-bar {
+  width: 50%;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  background: #eee;
+  border-radius: 30px 30px;
+}
+.create-btn {
+  color: white;
+  background: #5ace9f;
+  box-shadow: 0px 0px 10px rgb(90, 206, 159, 0.5);
+  width: 40%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.create-btn:hover {
+  box-shadow: 0px 0px 10px rgb(90, 206, 159, 1.7);
+  transform: scale(1.1);
+}
+.room-list-header {
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.room-list {
+  float: left;
+  width: 70%;
+  height: 50%;
+  padding-top: 30px;
+  padding-left: 30px;
+  height: 70%;
+}
+.all-room {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding-top: 10px;
+  padding-bottom: 90px;
+}
+.room-box {
+  width: 90%;
+  height: 80px;
+  border-radius: 10px 10px;
+  margin-bottom: 20px;
+  background: white;
+  transition: transform 0.5s;
+  box-shadow: 0 0 15px rgb(25, 25, 25, 0.1);
+  cursor: pointer;
+}
+.room-box:hover {
+  transform: scale(0.9);
+}
+
+.varibal {
+  float: left;
+  width: 10px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #4990e2;
+}
+.people-num {
+  float: left;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+.room-info {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+}
+.room-avator {
+  border-left: 1px solid #eee;
+}
+.room-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50%;
+  margin: 10px;
+}
+.room-name {
+  font-weight: bold;
+  width: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.name {
+  text-align: left;
+  display: block;
+  overflow: hidden;    
+    text-overflow:ellipsis;    
+    white-space: nowrap;
+}
+.desc {
+  font-size: 14px;
+  color: #adbdc5;
+}
+.room-state {
+  font-weight: bold;
+  width: 30%;
+}
+.state {
+  color: #4990e2;
+}
+.state i {
+  vertical-align: middle;
+}
+.room-operate {
+  width: 20%;
+  text-align: right;
+  .iconfont {
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  .icon-lock {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+}
+.top-avator {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  border-top-right-radius: 10px;
+}
+.right-info {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  transform: translate3d(0, 0, 0);
+  width: 28%;
+  height: 100%;
+  z-index: 9999;
+  margin-top: 10px;
+  transition: all 0.5s;
+  background: white;
+  border-top-left-radius: 50px;
+  box-shadow: 0 0 15px rgb(25, 25, 25, 0.1);
+}
+.isShowRoomInfo {
+  visibility: visible;
+  transform: translate3d(-100%, 0%, 0);
+}
+.room-info-box {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  text-align: left;
+  position: relative;
+}
+.room-desc {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.desc-info {
+  font-size: 14px;
+  color: grey;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.room-owner,
+.room-usernum {
+  font-size: 14px;
+  color: #4990e2;
+  margin-top: 10px;
+}
+.applyRoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.apply-btn {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: all .5s;
+  width: 50%;
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 50px 50px;
+  color: white;
+  background: linear-gradient(to right, #61b2d2 0%, #71d7c6 100%);
+  box-shadow: 0px 0px 10px #61b2d2, 0 0 10px #71d7c6;
+}
+.apply-btn:hover {
+  transform: scale(1.1);
+}
+.input-pwd {
+  width: 50%;
+  text-align: center;
+}
+.input {
+  width: 80%;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  border-radius: 50px 50px;
+  background: #eee;
+  transition: all .2s;
+}
+.input:focus{
+  border: 2px solid #4990e2;
+}
+.room-title {
+  font-size: 26px;
+}
+.bottombg {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+@media screen and(max-height: 1000px) {
+  .title i {
+    display: inline;
+  }
+  .room-list-header {
+    color: white;
+  }
+}
+@media screen and (min-width: 975px) {
+  .roomlist {
+    background: transparent;
+  }
+}
+@media screen and (max-width: 974px) {
+  .create-btn{
+    width: 80%;
+  }
+  .room-list {
+    float: none;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 200px;
+    left: 5%;
+    background: white;
+    padding-left: 10px;
+    z-index: 999;
+    border-radius: 15px 15px;
+    box-shadow: 0 0 15px rgb(25, 25, 25, 0.2);
+  }
+  .room-box {
+    width: 90%;
+  }
+  .room-list-header {
+    color: black;
+  }
+  .bottombg {
+    background: white;
+  }
+  .bgs {
+    float: none;
+    width: 100%;
+    height: 300px;
+    border-radius: 0 !important;
+    background: url('../assets/header.jpg') no-repeat;
+    background-size: 100%;
+    margin: 0;
+    z-index: -1;
+  }
+  .right-info {
+    width: 90%;
+    opacity: 0;
+    margin: 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: translate3d(-105%, 130%, 0);
+  }
+  .isShowRoomInfo {
+    opacity: 1;
+    transform: translate3d(-105%, 200px, 0);
+  }
+  .title {
+    color: white;
+  }
+  .title i {
+    display: inline;
+  }
+}

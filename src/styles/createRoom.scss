@@ -1,0 +1,74 @@
+.createRoom {
+  width: 100%;
+  height: 100%;
+  background: rgb(25, 25, 25, 0.3);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-box {
+  width: 400px;
+  background: white;
+  border-radius: 10px 10px;
+}
+.left,
+.right {
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  color: white;
+}
+.create-content {
+  width: 100%;
+  height: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.createRoom .welcome {
+  padding: 10px;
+  font-size: 20px;
+}
+.create-input {
+  width: 100%;
+  margin: 0 auto;
+}
+.create-input .iconfont {
+  color: #5584ff;
+}
+.roomname,
+.password {
+  width: 100%;
+  margin: 0 auto;
+}
+.input_text {
+  outline: 0;
+  border: 0;
+  padding: 20px;
+  border-radius:0;
+}
+.input_text:focus {
+  border-bottom: 2px solid #5584ff;
+}
+.btn-create {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.radius_btn {
+  border: none;
+  outline: 0;
+  width: 100%;
+  height: 30px;
+  border-radius: 30px 30px;
+  background: #5584ff;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.radius_btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgb(25, 25, 25, 0.3);
+}

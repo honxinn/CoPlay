@@ -1,0 +1,73 @@
+.roomInfo {
+    width: 100%;
+    height: 100%;
+    background: rgba(25, 25, 25, 0.5);
+    z-index: 99;
+    position: fixed;
+    top: 100%;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .user-box {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    border-radius: 15px 15px;
+  }
+  .header {
+    background: #333;
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top-left-radius: 15px 15px;
+    border-top-right-radius: 15px 15px;
+  }
+  .user-info {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-bottom-left-radius: 15px 15px;
+    border-bottom-right-radius: 15px 15px;
+    padding-bottom: 20px;
+  }
+  .avators {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+  .alter-box {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .alter {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 25px;
+    input {
+      width: 70%;
+      outline: 0;
+      border: 1px solid #eee;
+      padding: 10px;
+      border-radius: 15px 15px;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+      .alter {
+        font-size: 16px;
+      }
+  }

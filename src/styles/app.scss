@@ -1,0 +1,456 @@
+* {
+  background-attachment: fixed;
+  box-sizing: border-box;
+  text-size-adjust: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow: auto;
+}
+
+#app {
+  font-family: 'Arial', 'Microsoft YaHei', '黑体', '宋体', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+.bg,
+.bg img {
+  width: 100%;
+  height: 100%;
+
+}
+.bg {
+  position: fixed;
+  top: 0;
+  z-index: -99;
+  overflow: hidden;
+}
+.svgs {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+.musicBg {
+  position: fixed;
+  left: 8%;
+  right: 8%;
+  top: 8%;
+  bottom: 8%;
+  overflow: hidden;
+  border-radius: 10px 10px;
+  box-shadow: 0 0 20px rgba(95, 95, 95, 0.2);
+}
+
+.music_menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 130px;
+  width: 13%;
+  background: rgb(255,255,255,.6);
+  backdrop-filter: blur(5px);
+  
+  text-align: center;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.music_chat {
+  position: absolute;
+  left: 13%;
+  top: 0;
+  bottom: 130px;
+  right: 0;
+  transition: all 0.2s;
+  background: rgb(255,255,255,.6);
+  backdrop-filter: blur(5px);
+  border-top-right-radius: 10px;
+  user-select: text;
+}
+.user_avator {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.user_avator:hover {
+  .avator {
+    box-shadow: 0 0 15px rgb(25, 25, 25, .5);
+    transform: scale(1.1);
+  }
+  
+}
+.avator {
+  transition: all .2s;
+  border-radius: 50% 50%;
+  width: 40px;
+  height: 40px;
+}
+.list {
+  .icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+}
+
+.bar {
+  display: flex;
+  width: 60%;
+  align-items: center;
+}
+.process-bar {
+  transition: all 0.5s;
+  height: 0.3rem;
+  .el-slider__runway {
+    margin: 0px;
+  }
+}
+
+.music {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    font-size: 40px;
+  }
+}
+.footer {
+  user-select: none;
+  transform: translate3d(0px, 0px, 0px);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  transition: all 0.1s;
+  bottom: 0px;
+  z-index: 9999;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  .iconfont {
+    color: #6dcec9;
+    cursor: pointer;
+  }
+}
+.isDown {
+  -webkit-animation: bounce-down 1.5s;
+  animation: bounce-down 1.5s;
+}
+.isUp {
+  -webkit-animation: bounce-up 1.5s;
+  animation: bounce-up 1.5s;
+}
+.isOpen {
+  transition: all 0.2s;
+  box-shadow: 0 0 15px rgb(25, 25, 25, 0.2);
+  width: 30%;
+  transform: translateZ(0) !important;
+  visibility: visible !important;
+}
+
+.rotation {
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+}
+
+.micon {
+  vertical-align: middle;
+  width: 55%;
+  height: 55%;
+  border-radius: 50% 50%;
+  box-shadow: 0 0 20px rgb(25 25 25);
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 0s;
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
+.isRotating {
+  transition: rotate 10s linear infinite;
+  -webkit-animation: rotate 10s linear infinite;
+}
+
+.music_name,
+.music_desc {
+  display: inline-block;
+  width: 35%;
+  color: black;
+}
+.music_name {
+  font-weight: bold;
+}
+.music_desc {
+  color: #bfcbd2;
+}
+
+.control-play {
+  vertical-align: middle;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.volumn {
+  vertical-align: middle;
+  display: inline-block;
+  width: 19%;
+  .iconfont {
+    font-size: 25px;
+    padding: 10px;
+  }
+}
+.volum-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+.volum-right .el-slider {
+  width: 100%;
+}
+.music-infos {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.isRoom {
+  bottom: 0%;
+}
+.isFooter {
+  transform: translate3d(0px, 110%, 0px);
+}
+.list {
+  a {
+    display: block;
+    color: black;
+    transition: transform 0.5s;
+    border-radius: 30px 30px;
+    padding: 10px;
+    margin: 10px;
+  }
+  a:hover {
+    transform: scale(1.1);
+
+    color: #143465;
+    font-weight: bold;
+    .iconfont {
+      color: #007eff;
+    }
+  }
+  .router-link-active {
+    color: #143465;
+    background: #d0ddf5;
+    font-weight: bold;
+    .iconfont {
+      color: #007eff;
+    }
+  }
+}
+.el-slider__runway {
+  background: #ddf4f7;
+}
+.el-slider__bar {
+  background: #7ac9d2;
+  transition: left 0.5s;
+}
+.el-slider__button {
+  width: 10px;
+  height: 10px;
+  background: #7ac9d2;
+  box-shadow: 0 0 15px 5px #7ac9d2;
+  border: 2px solid #ffffff;
+}
+.el-slider__runway.disabled .el-slider__bar {
+  background: #7ac9d2;
+}
+.el-slider__runway.disabled .el-slider__button {
+  border-color: white;
+}
+.fade-enter-active {
+  transition: opacity 0.5s;
+} /*进入过渡的开始状态，元素被插入时生效，只应用一帧后立刻删除*/
+.fade-enter {
+  opacity: 0;
+} /*离开过渡的开始状态，元素被删除时触发，只应用一帧后立刻删除*/
+.fade-leave {
+  opacity: 1;
+} /*离开过渡的结束状态，元素被删除时生效，离开过渡完成后被删除*/
+.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-o-keyframes rotate {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media screen and (max-width: 974px) {
+  #app {
+    .musicBg {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+      .music_menu {
+        z-index: 8999;
+        transform: translate3d(-100%, 0, 0);
+        visibility: hidden;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+      .music_chat {
+        background: none;
+        left: 0%;
+        border-top-right-radius: 0px;
+      }
+      .footer {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+    }
+    .music_name,
+    .music_desc {
+      display: block;
+      width: 100%;
+    }
+    .bar {
+      width: 100%;
+      text-align: center;
+      display: block;
+      .control-play {
+        width: 100%;
+      }
+      .volumn {
+        width: 50%;
+      }
+      .volum-right {
+        margin: 0 auto;
+        width: 70%;
+      }
+    }
+    .volum-right .el-slider {
+      width: 50%;
+    }
+    .rotation {
+      width: 40%;
+      padding: 10px;
+    }
+  }
+  .isOpen {
+    width: 50%;
+  }
+}
+@media screen and (max-height: 1000px) {
+  #app {
+    .musicBg {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+      .music_menu {
+        z-index: 8999;
+        transform: translate3d(-100%, 0, 0);
+        visibility: hidden;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+      .music_chat {
+        left: 0%;
+        background: none;
+        border-top-right-radius: 0px;
+        backdrop-filter: blur(1px);
+      }
+      .footer {
+        background: white;
+       
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        .micon {
+          box-shadow: 0 0 20px #eee;
+        }
+        .music_name,
+        .music_desc {
+          color: black;
+        }
+      }
+    }
+  }
+}
