@@ -4,7 +4,7 @@
 
 技术栈：Vue.js ,Websocket, Spring boot
 
-[CoPlay-基于Websocket的多端同步播放器](http://tenss.cn:82)
+[CoPlay-基于Websocket的多端同步播放器](http://tenss.cn:8082)
 
 ## 项目组件安装
 ```
