@@ -103,7 +103,7 @@ function websocketclose (e) {
 
 function initWebSocket (rid) {
     // 初始化weosocket
-    const wsuri = `ws://tenss.cn:8085/message?rid=${rid}&token=${state.token}`
+    const wsuri = `ws://192.168.123.60:8085/message?rid=${rid}&token=${state.token}`
     const websock = new WebSocket(wsuri)
     websock.onmessage = websocketonmessage
     websock.onopen = websocketonopen
