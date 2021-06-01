@@ -8,7 +8,7 @@
 
 [CoPlay-基于Websocket的多端同步播放器](http://tenss.cn:8082)
 
-## 项目组件安装
+## 项目安装
 ```
 yarn install
 ```
